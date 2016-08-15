@@ -12,15 +12,15 @@ namespace getandpost.Controllers
         }
 
         [HttpGet]
-        public IActionResult SubmitGet(string field, string fieldOther)
+        public IActionResult SubmitGet(string field, string fieldOther, FormFields form)
         {
-            return Json(new {message = "hmmmm.. looks good"});
+            return Json(new {message = "hmmmm.. looks good", model = form});
         }
 
         [HttpPost]
         public IActionResult SubmitPost(FormFields form)
         {
-            return Json(JsonConvert.SerializeObject(form));
+            return Json(new {model = form});
         }
     }
 }

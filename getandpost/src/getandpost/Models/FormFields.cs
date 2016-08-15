@@ -7,7 +7,7 @@ namespace getandpost.Models
 {
     public class FormFields
     {
-        public int FromId { get; set; }
+        public int FormId { get; set; }
         public string FormField { get; set; }
         public string FormFieldOther { get; set; }
     }
